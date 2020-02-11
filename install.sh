@@ -12,6 +12,11 @@ source install/link.sh
 if [ "$(uname)" == "Darwin" ]; then
     echo -e "\\n\\nRunning on macOS"
 
+    # After the install, setup fzf
+    echo -e "\\n\\nRunning fzf install script..."
+    echo "=============================="
+    /usr/local/opt/fzf/install --all --no-bash --no-fish
+
     # after the install, install neovim python libraries
     echo -e "\\n\\nRunning Neovim Python install"
     echo "=============================="
