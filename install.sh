@@ -12,6 +12,9 @@ source install/link.sh
 if [ "$(uname)" == "Darwin" ]; then
     echo -e "\\n\\nRunning on macOS"
 
+    # install brew dependencies from Brewfile
+    brew bundle
+
     # After the install, setup fzf
     echo -e "\\n\\nRunning fzf install script..."
     echo "=============================="
