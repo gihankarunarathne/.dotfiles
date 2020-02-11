@@ -1,8 +1,9 @@
 # MacOS X - zsh
 alias g='git'
 alias k='kubectl'
-alias sc='source ~/.zsh_alias'
+alias sc='source ~/.zshrc'
 alias t='tmux'
+alias v='nvim'
 
 alias kp='k get pods'
 alias kt='k top pods'
@@ -27,8 +28,13 @@ alias pbc='pbcopy'
 alias pbp='pbpaste'
 
 alias tx='tmux'
+alias ts='tmux ls'
+alias tns='tmux new -s'
+alias ta='tmux attach'
+alias tas='tmux attach -t'
 
 alias how='howdoi'
+alias zshalias="nvim $DOTFILES/zsh/zsh_alias"
 alias dcj='~/codejam/dcj/dcj.sh'
 
 alias dev='~/noon/helm-dev/mac/bin/dev'
