@@ -151,9 +151,31 @@ call plug#begin('~/.config/nvim/plugged')
 
 " Language-Specific Configuration {{{
 
+    " python {{{
+        Plug 'w0rp/ale' " syntax check
+
+        Plug 'google/yapf' " code formatter
+        autocmd FileType python nnoremap <LocalLeader>= :0,$!yapf<CR>
+
+        " Plug 'davidhalter/jedi-vim' " auto completion
+
+        " Plug 'Valloric/YouCompleteMe' " auto complete
+        " let g:ycm_autoclose_preview_window_after_completion=1
+        " map <leader>g  :YcmCompleter GoToDefinitionElseDeclaration<CR>
+
+        Plug 'python-mode/python-mode', { 'for': 'python', 'branch': 'develop' }
+        let g:pymode_virtualenv = 1 " automatic virtualenv detection
+        let g:pymode_run_bind = '<leader>R' " run python code
+        let g:pymode_rope = 1
+        " let g:pymode_rope_completion = 1
+        " let g:pymode_rope_completion_bind = '<C-Space>'
+    " }}}
+
     " html / templates {{{
 
     " }}}
+
+    Plug 'ekalinin/Dockerfile.vim'
 " }}}
 
 call plug#end()
